@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Notas</h2>
+<a class="new" href="{% url 'mynotes:note_edit' %}">Crear nueva nota</a>
+<ul>
+    {% for note in notes %}
+    <div class="note-card">
+        <div class="note-header">
+            <a href="{% url 'mynotes:note_detail' pk=note.pk %}">
+                <h2 class="note-title">{{ note.title }}</h2>
+                <span class="note-date">{{ note.creation_date|date:"Y-m-d H:i" }}</span>
+            </a>
+            
+        </div>
+        <div class="note-actions">
+            <a href="{% url 'mynotes:note_edit' pk=note.pk %}" class="favorite-btn">✏️ Editar</a>
+            <a href="{% url 'mynotes:note_delete' pk=note.pk %}" class="delete-btn">🗑 Eliminar</a>
+        </div>
+        <div class="note-status">
+            <span class="status-dot pending"></span>
+        </div>
+    </div>
+    {% empty %}
+    <li>Sin notas creadas</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+<!-- detalles de nota -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ note.title }}</h2>
+<p>{{ note.content }}</p>
+<p>Creada en: {{ note.creation_date|date:"Y-m-d H:i" }}</p>
+<a href="{% url 'mynotes:note_edit' pk=note.pk %}">Editar</a>
+<a href="{% url 'mynotes:note_delete' pk=note.pk %}">Eliminar</a>
+<a href="{% url 'mynotes:note_list' %}">Regresar a todas las notas</a>
+{% endblock %}
