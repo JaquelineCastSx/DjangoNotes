@@ -12,9 +12,15 @@
         <h1>Bienvenido a tus notas</h1>
         {% if user.is_authenticated %}
         <p>Bienvenid@, {{ user.username }}</p>
-        <a class="logout" href="{% url 'logout' %}">Salir</a>
+        
         {% endif %}
+
+        <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button class="logout" type="submit">Salir</button>
+    </form>
     </header>
+    
     <main>
         {% block content %}{% endblock %}
     </main>

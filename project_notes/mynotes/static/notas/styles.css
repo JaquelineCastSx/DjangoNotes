@@ -10,7 +10,7 @@ header {
 main {
     padding: 20px;
 }
-a{
+a {
     text-decoration: none;
     color: black;
     margin-right: 10px;
@@ -34,7 +34,7 @@ form > button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
-    width: 300px;
+    width: 400px;
     display: inline-block;
     vertical-align: top;
 }
@@ -94,17 +94,100 @@ form > button {
 .in-progress {
     background-color: blue;
 }
-.new{
+.new {
     background-color: #A8DADC;
     color: #14253D;
     padding: 5px;
     border-radius: 5px;
     margin: 5px;
 }
-.logout{
+.logout {
     background-color: #E63946;
     color: white;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     margin: 5px;
+}
+
+#titulo {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Añade espacio debajo del encabezado */
+}
+
+#form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Mantiene un ancho uniforme en todos los formularios */
+}
+
+#form p {
+    margin: 10px 0; /* Espacio entre cada elemento del formulario */
+}
+
+input, textarea {
+    width: 100%; /* Asegura que los campos de entrada usen todo el ancho */
+    padding: 8px;
+    margin-top: 5px; /* Espaciado entre los campos del formulario */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho */
+    border: 1px solid #ccc; /* Borde sutil para las entradas */
+    border-radius: 4px; /* Esquinas redondeadas para las entradas */
+}
+
+#submit {
+    background-color: #007BFF; /* Color principal del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%; /* El botón se extiende por todo el ancho del formulario */
+    margin-top: 10px; /* Espacio encima del botón */
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+#cancelar {
+    display: block; /* Hace que el enlace sea de nivel de bloque para facilitar el clic */
+    text-align: center;
+    margin-top: 20px; /* Espacio encima del enlace de cancelación */
+    color: #333; /* Iguala el color del botón */
+    text-decoration: none; /* Sin subrayado */
+    background-color: #E63946;
+    width: 100px;
+    border-radius: 20px;
+}
+
+#newNote{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#noteTitle {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px; /* Adequate spacing from the top */
+}
+
+#noteContent, #noteDate {
+    font-size: 16px;
+    color: #555;
+    width: 300px; /* Uniform width with forms */
+    text-align: left;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; /* Spacing between paragraphs */
 }

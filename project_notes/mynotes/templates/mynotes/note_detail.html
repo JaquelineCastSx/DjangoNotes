@@ -2,10 +2,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>{{ note.title }}</h2>
-<p>{{ note.content }}</p>
-<p>Creada en: {{ note.creation_date|date:"Y-m-d H:i" }}</p>
-<a href="{% url 'mynotes:note_edit' pk=note.pk %}">Editar</a>
-<a href="{% url 'mynotes:note_delete' pk=note.pk %}">Eliminar</a>
-<a href="{% url 'mynotes:note_list' %}">Regresar a todas las notas</a>
+<div class="note-card">
+    <h2 id="noteTitle">{{ note.title }}</h2>
+    <p id="noteContent">{{ note.content }}</p>
+    <p id="noteDate">Creada en: {{ note.creation_date|date:"Y-m-d H:i" }}</p>
+    <a class="favorite-btn" href="{% url 'mynotes:note_edit' pk=note.pk %}">✏️ Editar</a>
+    <a class="delete-btn" href="{% url 'mynotes:note_delete' pk=note.pk %}">🗑 Eliminar</a>
+    <a class="favorite-btn" href="{% url 'mynotes:note_list' %}">Regresar a todas las notas</a>    
+</div>
 {% endblock %}
