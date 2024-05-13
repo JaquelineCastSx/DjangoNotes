@@ -3,7 +3,9 @@
 {% block content %}
 <h2>Notas</h2>
 <a class="new" href="{% url 'mynotes:note_edit' %}">Crear nueva nota</a>
+<!-- Template de todas las notas -->
 <ul>
+    <!-- Estructura de una nota -->
     {% for note in notes %}
     <div class="note-card">
         <div class="note-header">

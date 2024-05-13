@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from .views import (NoteListView, NoteDetailView, NoteCreateView, NoteUpdateView, NoteDeleteView)
 
+#URL's de la aplicación
 app_name = 'mynotes'
 urlpatterns = [
     path('', views.NoteListView.as_view(), name='note_list'),
