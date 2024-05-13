@@ -1,0 +1,13 @@
+<!-- eliminar nota -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Seguro que quieres eliminar la nota: "{{ object.title }}"?
+Esta acción es irreversible.</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar</button>
+</form>
+<a href="{% url 'mynotes:note_detail' pk=object.pk %}">Cancelar</a>
+{% endblock %}
+

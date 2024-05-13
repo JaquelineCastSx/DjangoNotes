@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="{% static 'notas/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a tus notas</h1>
+        {% if user.is_authenticated %}
+        <p>Bienvenid@, {{ user.username }}</p>
+        
+        {% endif %}
+
+        <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" style="border: none; background: none; padding: 0; color: blue; text-decoration: underline; cursor: pointer;">Logout</button>
+    </form>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    
+</body>
+</html>

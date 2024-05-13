@@ -1,0 +1,49 @@
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin: 10px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Adjust width as needed */
+    margin: 10px;
+}
+
+form p {
+    margin: 10px 0;
+}
+
+input, button {
+    width: 100%; /* Full width of the form */
+    padding: 8px;
+    margin-top: 5px; /* Spacing between form fields */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+button {
+    background-color: #007BFF; /* Bootstrap primary blue, change as per theme */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
