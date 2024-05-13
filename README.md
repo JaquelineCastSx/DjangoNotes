@@ -1,5 +1,6 @@
 # DjangoNotes
 # Mynotes Proyect
+## Jaqueline Castillo & Iván Gutiérrez
 
 ### **Configuración del Entorno**
 
